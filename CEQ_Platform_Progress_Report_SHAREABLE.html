@@ -376,11 +376,11 @@
  This report is to update the team on where we are with the CEQ AI Coaching Platform. The aim is to give everyone a clear view of what's been built, what's been improved since our March meeting, and where we now sit competitively to take it to the next stage commercially.
  </p>
  <p>
- I've split it into two parts so it's easier to follow. <strong>Part 1</strong> covers the build that came out of our March planning meeting: the quantitative critique engine, branded PDF reports, the dual submission workflows, video integration and the new accordion-based report layout. <strong>Part 2</strong> covers the further enhancements I've made through early April: tightening up the critique engine, promoting the Question Generator to a proper full-screen mode, rebuilding the Ask ARIA experience to be much more readable, and (most significantly) loading the full CEQ Executive Coaching Methodology in as a layered knowledge module. That last one is what sets the platform apart from any generic AI coaching tool currently on the market.
+ I've split it into two parts so it's easier to follow. <strong>Part 1</strong> covers the build that came out of our March planning meeting: the full quantitative and qualitative critique engine, branded PDF reports, the dual submission workflows, video integration and the new accordion-based report layout. <strong>Part 2</strong> covers the further enhancements I've made through early April: tightening up the critique engine, promoting the Question Generator to a proper full-screen mode, rebuilding the Ask ARIA experience to be much more readable, and (most significantly) loading the full CEQ Executive Coaching Methodology in as a layered knowledge module. That last one is what sets the platform apart from any generic AI coaching tool currently on the market.
  </p>
 
  <div class="callout">
- <strong>Headline:</strong> The platform now delivers a full quantitative AI critique (OUCH! Habit Counter, Positive Coaching Behaviours, GROW Tracker, Speaking Time Analysis, Methodology Fidelity), a Question Generator that produces ready-to-use GROW questions for any meeting, an Ask ARIA reference mode with paginated answers, and, most importantly, a coaching engine grounded in CEQ's own proprietary methodology rather than generic best practice.
+ <strong>Headline:</strong> The platform now delivers a full quantitative and qualitative AI critique (OUCH! Habit Counter, Positive Coaching Behaviours, GROW Tracker, Speaking Time Analysis, Methodology Fidelity), a Question Generator that produces ready-to-use GROW questions for any meeting, an Ask ARIA reference mode with paginated answers, and, most importantly, a coaching engine grounded in CEQ's own proprietary methodology rather than generic best practice.
  </div>
 
  <h4>Where the platform now sits</h4>
@@ -482,7 +482,53 @@
  </div>
  </div>
 
- <h2>6. Phase Status</h2>
+ <h2>6. Live VC Recording - Teams &amp; Zoom Integration</h2>
+ <p>
+ One of the bigger pieces of work was opening the platform up to live coaching conversations held over video calls. Most of our real coaching now happens on Teams or Zoom rather than in the room, so it was important the platform could capture those sessions and put them through the same critique engine as anything recorded directly inside the app.
+ </p>
+ <div class="card-grid">
+ <div class="feature-card">
+ <div class="card-title">Teams &amp; Zoom Capture</div>
+ <p class="card-desc">Users can now record their video coaching sessions on either Microsoft Teams or Zoom and upload the resulting file (audio or video) into the platform for ARIA to transcribe and critique.</p>
+ </div>
+ <div class="feature-card">
+ <div class="card-title">Step-by-Step Instructions</div>
+ <p class="card-desc">A clear, plain-English instruction panel walks the user through enabling local recording in Teams or Zoom, locating the saved file afterwards, and uploading it into the platform - so no prior tech knowledge is needed.</p>
+ </div>
+ <div class="feature-card">
+ <div class="card-title">Same Critique Engine</div>
+ <p class="card-desc">Once uploaded, the recording goes through exactly the same Whisper transcription and CEQ AI critique pipeline as in-app recordings. The coach gets the same OUCH! / GROW / Speaking Time / Methodology Fidelity report, regardless of where the session was recorded.</p>
+ </div>
+ <div class="feature-card">
+ <div class="card-title">Real-World Coverage</div>
+ <p class="card-desc">This closes the gap between the platform and how coaching actually happens day-to-day. Coaches can now get AI feedback on their real client work, not just on practice scenarios recorded inside the app.</p>
+ </div>
+ </div>
+
+ <h2>7. AI Policy Declaration &amp; GDPR Signposting</h2>
+ <p>
+ With AI in the loop and real coaching conversations being recorded, transcribed and analysed, it was important to be upfront with users about what the platform does with their data. A new AI Policy declaration pop-up now appears at the appropriate point in the user journey, with clear GDPR signposting alongside it.
+ </p>
+ <div class="card-grid">
+ <div class="feature-card">
+ <div class="card-title">AI Policy Declaration Pop-Up</div>
+ <p class="card-desc">A clear, plain-English pop-up explains that the platform uses AI (OpenAI Whisper for transcription, Anthropic Claude for critique) to process recordings, and asks the user to acknowledge before proceeding.</p>
+ </div>
+ <div class="feature-card">
+ <div class="card-title">GDPR Signposting</div>
+ <p class="card-desc">The pop-up signposts how recordings, transcripts and reports are stored and handled, who has access, and the user's rights under GDPR. Links out to the full CEQ data policy for anyone who wants the detail.</p>
+ </div>
+ <div class="feature-card">
+ <div class="card-title">Coachee Consent Reminder</div>
+ <p class="card-desc">Coaches are reminded that any third party in the recording (a coachee, a colleague) must have given informed consent before the session is uploaded for AI analysis. Built into the upload flow rather than buried in terms.</p>
+ </div>
+ <div class="feature-card">
+ <div class="card-title">One-Time Acknowledgement</div>
+ <p class="card-desc">The declaration is shown the first time a user uploads or records a session, then remembered against their account so the experience doesn't get noisy on repeat use.</p>
+ </div>
+ </div>
+
+ <h2>8. Phase Status</h2>
 
  <table class="data-table">
  <thead>
@@ -510,17 +556,17 @@
  <div class="part-sub">Refinements to the critique engine, the promotion of the Question Generator to a full mode, an Ask ARIA rebuild, and the loading of the CEQ Executive Coaching Methodology as a layered knowledge module.</div>
  </div>
 
- <h2>7. Critique Engine - Accuracy &amp; Fidelity Refinements</h2>
+ <h2>9. Critique Engine - Accuracy &amp; Fidelity Refinements</h2>
  <p>
  With more real recordings going through the engine, I've been able to tune it so the output accurately reflects the coaching conversation. The OUCH! Habit Counter now ignores social pleasantries like greetings and sign-offs, so the Statements and Closed Questions counts only reflect genuine coaching utterances. The GROW Tracker has been refocused so it appraises the <em>coach</em> rather than the coachee, with a "Coach's Inputs" column that quotes the actual questions and prompts used to steer the conversation through Goal, Reality, Options and Will. Speaking Time Analysis is now anchored to the authoritative recording duration, so the totals always add up correctly. The result is a critique the team can trust and defend in front of a coachee. (Technical detail of the underlying fixes is in the Appendix.)
  </p>
 
- <h3>7.1 "Ask CEQ" renamed to "Ask ARIA"</h3>
+ <h3>9.1 "Ask CEQ" renamed to "Ask ARIA"</h3>
  <p>
  Every reference to "Ask CEQ" across the navigation, dashboard cards, page headers, mode pills and chat welcome screens has been renamed to "Ask ARIA". "CEQ frameworks" is deliberately preserved (e.g. "Our AI assistant ARIA will give feedback using CEQ coaching frameworks") so the terminology stays accurate.
  </p>
 
- <h2>8. Question Generator - Promoted to a Full Mode</h2>
+ <h2>10. Question Generator - Promoted to a Full Mode</h2>
  <p>
  The Question Generator previously sat as a small collapsible panel that looked more like a title than a button. It has now been promoted to a fourth mode pill alongside Coaching, Practice Partner and Ask ARIA, with a full-screen panel of its own.
  </p>
@@ -533,7 +579,17 @@
  <li><strong>Layout fix.</strong> The chat container's fixed height was previously trapping the scroll inside the panel. Question Generator mode now releases that constraint so the page scrolls naturally with longer outputs.</li>
  </ul>
 
- <h2>9. Ask ARIA - Speed, Formatting &amp; Pagination</h2>
+ <h2>11. Practice Partner - User-Directed Roleplay</h2>
+ <p>
+ The Practice Partner mode has been opened up so the user is genuinely in the driver's seat. Previously the roleplay scenarios were quite prescriptive; now the user gets to set the terms of the practice session themselves before ARIA steps into role.
+ </p>
+ <ul>
+ <li><strong>Coach / Coachee toggle.</strong> A simple pill toggle lets the user choose which side of the conversation they want to practise. Pick "Coach" and ARIA plays the coachee, giving the user a safe space to rehearse their questioning, listening and GROW steering. Pick "Coachee" and ARIA plays the coach, so the user can experience being on the receiving end of a CEQ-style session.</li>
+ <li><strong>Free-form scenario direction.</strong> The user can type any scenario they like into the scenario box, in their own words: a tricky direct report, a board-level conflict, a personal career crossroads, a difficult feedback conversation, anything at all. ARIA picks up the context and plays the relevant role authentically against it, rather than being limited to a fixed list of pre-canned scenarios.</li>
+ <li><strong>Methodology-aware roleplay.</strong> Because the CEQ Executive Coaching Methodology is loaded into Practice Partner mode (see Section 10), ARIA can play a C-level coachee far more authentically when the scenario calls for it - referencing OKRs, sponsor dynamics, vision and mission alignment - rather than defaulting to generic "I'm stressed at work" roleplay.</li>
+ </ul>
+
+ <h2>12. Ask ARIA - Speed, Formatting &amp; Pagination</h2>
  <p>
  Ask ARIA used to dump a wall of text and take a noticeable pause before doing it. Three changes have transformed the experience:
  </p>
@@ -543,7 +599,7 @@
  <li><strong>Hardened error surfacing.</strong> If anything goes wrong, the user now sees an inline diagnostic in the panel rather than a silent failure, which makes any future debugging immediate.</li>
  </ul>
 
- <h2>10. CEQ Executive Coaching Methodology - Loaded as Layered Knowledge</h2>
+ <h2>13. CEQ Executive Coaching Methodology - Loaded as Layered Knowledge</h2>
 
  <p>
  This is, strategically, the most significant enhancement of the lot. The full CEQ Executive Coaching Methodology document, covering Sections A to D - the Personal Map, the Two Foundation Stones and Four Buckets of Leadership, Working with the Client, and In the Session - has been loaded into a new <code>getCEQMethodology()</code> function in the backend and selectively injected into the relevant ARIA modes. All pricing detail has been stripped out entirely as commercially sensitive, and never reaches the model.
@@ -554,7 +610,7 @@
  <p>This single change moves the platform from being "another AI coaching app" to being a faithful digital extension of CEQ's proprietary executive coaching IP. ARIA now coaches, critiques and generates questions through the same lens that CEQ's human coaches use with C-suite clients - rather than through generic open-question best practice. No competitor can replicate this without access to the methodology.</p>
  </div>
 
- <h3>10.1 Where it adds real value to ARIA</h3>
+ <h3>13.1 Where it adds real value to ARIA</h3>
 
  <ol>
  <li><strong>Coaching mode gets a much richer mental model.</strong> ARIA already coaches well at the question level. With the methodology loaded, it can recognise <em>which phase</em> the user is in (Taking Stock vs Operating Model vs In-Session work) and steer accordingly - for example a brand-new user gets gently walked through "Who am I / Where am I now / How did I get here / Where am I going" rather than being thrown straight into goal-setting.</li>
@@ -564,7 +620,7 @@
  <li><strong>Practice Partner can simulate a C-level coachee far more authentically</strong> - referencing OKRs, sponsor dynamics, LTIPs, Vision/Mission alignment - instead of generic "I'm stressed at work" roleplay.</li>
  </ol>
 
- <h3>10.2 What it should NOT do - the disruption risk and how it's mitigated</h3>
+ <h3>13.2 What it should NOT do - the disruption risk and how it's mitigated</h3>
 
  <ul>
  <li><strong>It must not replace OUCH!, GROW or the 7 Triggers as the primary frameworks.</strong> Those are the engine. The methodology is an additional layer that sits <em>above</em> them. Mitigated by an explicit guardrail at the bottom of <code>getCEQMethodology()</code> stating that the methodology supplements - never replaces - the core frameworks.</li>
@@ -573,7 +629,7 @@
  <li><strong>Don't bloat every prompt with the full text.</strong> Token cost would balloon and the core frameworks would be diluted. Mitigated by selective injection - the methodology is appended only to the modes where it adds value (Coaching, Practice, Ask ARIA, Question Generator) and used as hidden reference inside Critique.</li>
  </ul>
 
- <h3>10.3 Implementation - zero core-engine disruption</h3>
+ <h3>13.3 Implementation - zero core-engine disruption</h3>
 
  <p>
  A new <code>getCEQMethodology()</code> helper in the backend returns the methodology as a structured constant (Sections A/B/C/D, with the pricing block excluded). The system prompt builder then appends a condensed methodology summary to the prompt only for the modes where it adds value:
@@ -592,7 +648,7 @@
  The critique gets one new <strong>optional</strong> section in the report: <strong>"Methodology Fidelity"</strong> - a green/amber/red tracker against five elements (Contracting, Download ritual, Time-keeping, Permissioned advice, Between-session offer). It is strictly additive - nothing existing changes. Crucially, the section is <em>conditional</em>: it only appears when the recording is at least 8 minutes long and the conversation looks like a real coaching session with enough material to fairly judge at least two of the criteria. Short drills and practice fragments don't trigger it, which protects the report from bloat.
  </p>
 
- <h2>11. Phase 9 (Proposed) - Client Pilot</h2>
+ <h2>14. Phase 9 (Proposed) - Client Pilot</h2>
  <div class="usp-box">
  <div class="usp-label">Phase 9 - Client Pilot rollout</div>
  <p>As per Gareth's ARIA pitch document, the next phase for a Client Pilot will involve developing a Sandbox version of the platform that clients can use with their own Playbook, leadership competencies and live project timelines, all integrated within ARIA. This gives a prospective pilot client (such as CAPITA) a working environment grounded in their own context rather than a generic demo. My estimate is that creating a pilot scheme of this kind would take roughly one week of additional development work on top of where we are today, after which we'd be ready to run a co-funded pilot and start the conversations Gareth has lined up with HRIS providers as a white-label opportunity.</p>
