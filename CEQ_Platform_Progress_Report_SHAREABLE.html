@@ -383,10 +383,51 @@
  <strong>Headline:</strong> The platform now delivers a full quantitative and qualitative AI critique (OUCH! Habit Counter, Positive Coaching Behaviours, GROW Tracker, Speaking Time Analysis, Methodology Fidelity), a Question Generator that produces ready-to-use GROW questions for any meeting, an Ask ARIA reference mode with paginated answers, and, most importantly, a coaching engine grounded in CEQ's own proprietary methodology rather than generic best practice.
  </div>
 
- <h4>Where the platform now sits</h4>
+ <h4>Where the platform now stands</h4>
  <p>
- ARIA is no longer just "an AI that asks open questions and tracks GROW". With the methodology now loaded, she's effectively become a digital extension of CEQ's coaching IP, able to recognise which mode a client is in, steer them through the Personal Map, and appraise sessions against our own ritual standards. Combined with OUCH!, GROW, the 7 Triggers, SuperListening, Logical Levels and BreakThrough (all of which remain the primary engine), our USP is that the platform is now genuinely impossible to replicate without access to CEQ's proprietary methodology.
+ ARIA is no longer just "an AI that asks open questions and tracks GROW". With the methodology now loaded, she now functions as a digital extension of CEQ's coaching IP, able to recognise which mode a client is in, steer them through the Personal Map, and appraise sessions against our own ritual standards. Combined with OUCH!, GROW, the 7 Triggers, SuperListening, Logical Levels and BreakThrough (all of which remain the primary engine), our USP is that the platform cannot be replicated without access to CEQ's proprietary methodology.
  </p>
+
+
+ <!-- ════════════════════════════════════════════ -->
+ <!-- FEATURES AT TIME OF MEETING -->
+ <!-- ════════════════════════════════════════════ -->
+ <div class="part-divider">
+ <div class="part-label">Baseline</div>
+ <div class="part-title">Features in place at the time of the March 24th meeting</div>
+ <div class="part-sub">For context, this is what the team saw (or would have seen, had the mic permissions firewall not blocked the live recorder demo) on the day. These elements were already built and working before any of the post-meeting development described below.</div>
+ </div>
+
+ <div class="card-grid">
+  <div class="feature-card">
+   <div class="card-title">Dashboard</div>
+   <div class="card-desc">Personal landing page giving each user an at-a-glance view of their current programme, recent activity and next actions.</div>
+  </div>
+  <div class="feature-card">
+   <div class="card-title">Programme / Project Timeline</div>
+   <div class="card-desc">Visual timeline showing the structure of the coaching programme or project, with phases, modules and key milestones laid out in sequence.</div>
+  </div>
+  <div class="feature-card">
+   <div class="card-title">Modules with Step-Based Workflow</div>
+   <div class="card-desc">Each module broken into ordered steps the user works through, with AI-integrated reflection prompts built in along the way.</div>
+  </div>
+  <div class="feature-card">
+   <div class="card-title">Actions</div>
+   <div class="card-desc">A place for users to capture, track and tick off the actions and commitments arising from their coaching work.</div>
+  </div>
+  <div class="feature-card">
+   <div class="card-title">Resources</div>
+   <div class="card-desc">A library of supporting materials - documents, links and reference content - tied to the relevant modules.</div>
+  </div>
+  <div class="feature-card">
+   <div class="card-title">Practice Video Upload (basic)</div>
+   <div class="card-desc">An early version of the practice video feature, allowing users to upload recordings of practice sessions for review. The full critique engine and live recorder came later.</div>
+  </div>
+  <div class="feature-card">
+   <div class="card-title">Community / Cohort Section</div>
+   <div class="card-desc">A cohort space for peer interaction and shared discussion, modelled on the Circle community platform.</div>
+  </div>
+ </div>
 
 
  <!-- ════════════════════════════════════════════ -->
@@ -602,7 +643,7 @@
  <h2>13. CEQ Executive Coaching Methodology - Loaded as Layered Knowledge</h2>
 
  <p>
- This is, strategically, the most significant enhancement of the lot. The full CEQ Executive Coaching Methodology document, covering Sections A to D - the Personal Map, the Two Foundation Stones and Four Buckets of Leadership, Working with the Client, and In the Session - has been loaded into a new <code>getCEQMethodology()</code> function in the backend and selectively injected into the relevant ARIA modes. All pricing detail has been stripped out entirely as commercially sensitive, and never reaches the model.
+ This is, strategically, the most significant enhancement. The full CEQ Executive Coaching Methodology document, covering Sections A to D - the Personal Map, the Two Foundation Stones and Four Buckets of Leadership, Working with the Client, and In the Session - has been loaded into a new <code>getCEQMethodology()</code> function in the backend and selectively injected into the relevant ARIA modes. All pricing detail has been stripped out entirely as commercially sensitive, and never reaches the model.
  </p>
 
  <div class="usp-box">
@@ -615,8 +656,8 @@
  <ol>
  <li><strong>Coaching mode gets a much richer mental model.</strong> ARIA already coaches well at the question level. With the methodology loaded, it can recognise <em>which phase</em> the user is in (Taking Stock vs Operating Model vs In-Session work) and steer accordingly - for example a brand-new user gets gently walked through "Who am I / Where am I now / How did I get here / Where am I going" rather than being thrown straight into goal-setting.</li>
  <li><strong>Critique gains a second lens.</strong> The critique today judges the coach's <em>technique</em> (open vs closed, OUCH habits, GROW coverage). With the methodology loaded, it can additionally flag <em>methodology fidelity</em> - for example "no contracting at the start", "no Download ritual offered", "session ran past time" (which we now have the duration for), "no permission-to-advise framing". This is what sets the platform apart from every other AI coaching tool on the market.</li>
- <li><strong>Question Generator can be methodology-aware.</strong> If the user says "first session with a new client", the generator biases toward the Personal Map questions; if they say "my client is stuck and miserable", it can diagnose Endure / Overthrow / Escape and generate accordingly. A big uplift with no new UI required.</li>
- <li><strong>Ask ARIA becomes the canonical reference</strong> for "what is the Download?", "what are the 4 Buckets?", "Endure vs Overthrow vs Escape" - content it previously didn't have and would otherwise have hallucinated.</li>
+ <li><strong>Question Generator can be methodology-aware.</strong> If the user says "first session with a new client", the generator biases toward the Personal Map questions; if they say "my client is stuck and miserable", it can diagnose Endure / Overthrow / Escape and generate accordingly. A meaningful improvement with no new UI required.</li>
+ <li><strong>Ask ARIA becomes the canonical reference</strong> for "what is the Download?", "what are the 4 Buckets?", "Endure vs Overthrow vs Escape" - content it previously didn't have access to and would otherwise have had to guess at.</li>
  <li><strong>Practice Partner can simulate a C-level coachee far more authentically</strong> - referencing OKRs, sponsor dynamics, LTIPs, Vision/Mission alignment - instead of generic "I'm stressed at work" roleplay.</li>
  </ol>
 
@@ -645,7 +686,7 @@
  </ul>
 
  <p>
- The critique gets one new <strong>optional</strong> section in the report: <strong>"Methodology Fidelity"</strong> - a green/amber/red tracker against five elements (Contracting, Download ritual, Time-keeping, Permissioned advice, Between-session offer). It is strictly additive - nothing existing changes. Crucially, the section is <em>conditional</em>: it only appears when the recording is at least 8 minutes long and the conversation looks like a real coaching session with enough material to fairly judge at least two of the criteria. Short drills and practice fragments don't trigger it, which protects the report from bloat.
+ The critique gets one new <strong>optional</strong> section in the report: <strong>"Methodology Fidelity"</strong> - a green/amber/red tracker against five elements (Contracting, Download ritual, Time-keeping, Permissioned advice, Between-session offer). It is strictly additive - nothing existing changes. Importantly, the section is <em>conditional</em>: it only appears when the recording is at least 8 minutes long and the conversation looks like a real coaching session with enough material to fairly judge at least two of the criteria. Short drills and practice fragments don't trigger it, which protects the report from bloat.
  </p>
 
  <h2>14. Phase 9 (Proposed) - Client Pilot</h2>
