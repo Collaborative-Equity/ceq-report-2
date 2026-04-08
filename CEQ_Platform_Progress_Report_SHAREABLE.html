@@ -440,6 +440,7 @@
  </div>
 
  <h2>1. CEQ AI Critique Engine</h2>
+ <p>The critique engine is the heart of the post-meeting build and is referenced throughout the rest of this report. The mechanism is the same wherever it is applied: the audio or video is first transcribed by <strong>OpenAI Whisper</strong> (which handles both audio and video files natively), and the resulting transcript is then passed to <strong>Claude Sonnet</strong>, which critiques it against the CEQ coaching frameworks - OUCH!, GROW, the 7 Triggers, SuperListening, Logical Levels and BreakThrough - using a tightly written system prompt with explicit positive and negative examples. The same engine is applied to every input route described further down: live audio recordings, live video recordings, and uploaded practice videos.</p>
  <div class="card-grid">
  <div class="feature-card">
  <div class="card-title">OUCH! Habit Counter</div>
@@ -479,11 +480,16 @@
  </div>
  </div>
 
- <h2>3. Practice Videos - CEQ AI Critique Integration</h2>
+ <h2>3. Practice Capture - Live Recording &amp; Video Upload</h2>
+ <p>There are now two distinct ways a user can get a practice session into the platform. Both routes feed into the same critique engine described in section 1 above.</p>
  <div class="card-grid">
  <div class="feature-card">
- <div class="card-title">Video Transcription</div>
- <p class="card-desc">Videos uploaded to the Practice Videos page are now transcribed via OpenAI Whisper (which handles video files natively) and critiqued by the CEQ AI engine.</p>
+ <div class="card-title">Live Audio <em>or</em> Video Recorder (major addition)</div>
+ <p class="card-desc">A full live recorder built directly into the standalone recorder page, using the user's own built-in microphone and camera. The user can choose to record audio only <em>or</em> a live video of themselves, straight onto the platform - no separate device, no upload step. A significant step up from only being able to submit pre-recorded files. Output is fed into the section 1 critique engine.</p>
+ </div>
+ <div class="feature-card">
+ <div class="card-title">Video Upload - now fully critiqued (major upgrade)</div>
+ <p class="card-desc">Videos uploaded to the Practice Videos page are now run through the same Whisper → Claude Sonnet pipeline described in section 1, returning the full CEQ AI critique against all our frameworks. Previously the upload feature simply stored the file - it now produces a complete coaching critique on submission, which is arguably the larger of the two upgrades in this section.</p>
  </div>
  <div class="feature-card">
  <div class="card-title">Dual Submit Buttons</div>
@@ -506,8 +512,8 @@
  <h2>5. UI/UX Refinements</h2>
  <div class="card-grid">
  <div class="feature-card">
- <div class="card-title">Standalone Recorder</div>
- <p class="card-desc">Text corrections to the on-screen instructions ("button below", "camera access", "video" descriptions) so the flow reads cleanly.</p>
+ <div class="card-title">Standalone Recorder - copy &amp; flow</div>
+ <p class="card-desc">Tidy-up of the on-screen instructions on the standalone recorder page ("button below", "camera access", "video" descriptions) to match the new live audio/video recording capability described in section 3.</p>
  </div>
  <div class="feature-card">
  <div class="card-title">Direct Scenario Button</div>
